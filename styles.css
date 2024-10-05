@@ -68,23 +68,46 @@
     line-height: 1.8;
   }
   /* For small devices (mobiles) */
-@media only screen and (max-width: 600px) {
-    .your-class {
-      width: 100%; /* This ensures elements use the full width of the screen */
-      text-align: center; /* Aligns content to the center for small screens */
-      /* You can add more adjustments here */
+/* General Flexbox and Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Layout Adjustments */
+    .about-container, .experience-container, .expertise-container, .projects-container {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Ensure full width */
     }
-  }
-  .container {
-    display: flex;
-    flex-direction: column; /* Stack items on mobile */
-    justify-content: center; /* Centers items vertically */
-  }
-  img {
-    max-width: 100%; /* Makes sure images scale down on smaller screens */
-    height: auto; /* Maintains the aspect ratio */
-  }
-      
+
+    section {
+        padding: 10px; /* Reduce padding for mobile */
+        margin: 10px; /* Adjust margins */
+    }
+
+    .expert-item, .experience-item, .project-item {
+        width: 100%; /* Full width items */
+        margin-bottom: 20px; /* Add space between items */
+    }
+
+    /* Font size reduction */
+    section h2 {
+        font-size: 1.5em; /* Smaller headings on mobile */
+    }
+
+    section p {
+        font-size: 0.9em; /* Smaller paragraph text */
+    }
+
+    /* Image scaling */
+    img, .profile-photo {
+        max-width: 100%; /* Make images responsive */
+        height: auto;
+    }
+
+    /* Button and link adjustments */
+    button, .project-item a {
+        width: 100%;
+        padding: 12px 20px; /* Larger buttons on mobile */
+    }
+}
+
   
   /* Flexbox Layout for About Section */
   .about-container {
