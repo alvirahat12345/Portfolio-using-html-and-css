@@ -1,54 +1,55 @@
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #0000;
     color: #333;
-  }
-  
-  /* Header Styling */
-  header {
+}
+
+/* Header Styling */
+header {
     background: linear-gradient(to right, #ff5f6d, #ffc371);
     color: #fff;
     padding: 20px;
     text-align: center;
     border-bottom: 5px solid #ff5f6d;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     margin-top: 10px;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin-right: 20px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  /* Section Styling */
-  section {
+}
+
+/* Section Styling */
+section {
     background-color: #fff;
     padding: 20px;
     margin: 20px;
@@ -56,71 +57,75 @@
     border-right: 5px solid #ff5f6d;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section h2 {
+}
+
+section h2 {
     margin-bottom: 10px;
     color: #ff5f6d;
-  }
-  
-  section p {
+}
+
+section p {
     margin-bottom: 20px;
     line-height: 1.8;
-  }
-  /* For small devices (mobiles) */
-/* General Flexbox and Mobile Adjustments */
-@media (max-width: 768px) {
-    /* Layout Adjustments */
-    .about-container, .experience-container, .expertise-container, .projects-container {
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Ensure full width */
-    }
+}
 
+/* Responsive Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+    /* Adjust section padding and width on mobile */
     section {
-        padding: 10px; /* Reduce padding for mobile */
-        margin: 10px; /* Adjust margins */
+        padding: 15px;
+        margin: 10px;
+        width: 100%;
     }
 
+    /* Stack flex containers vertically on smaller screens */
+    .about-container, .experience-container, .expertise-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Make sure items in flex containers use full width */
     .expert-item, .experience-item, .project-item {
-        width: 100%; /* Full width items */
-        margin-bottom: 20px; /* Add space between items */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    /* Font size reduction */
+    /* Adjust font sizes for better readability on mobile */
     section h2 {
-        font-size: 1.5em; /* Smaller headings on mobile */
+        font-size: 1.5em;
     }
 
     section p {
-        font-size: 0.9em; /* Smaller paragraph text */
+        font-size: 0.9em;
     }
 
-    /* Image scaling */
-    img, .profile-photo {
-        max-width: 100%; /* Make images responsive */
-        height: auto;
-    }
-
-    /* Button and link adjustments */
+    /* Ensure buttons are full-width */
     button, .project-item a {
         width: 100%;
-        padding: 12px 20px; /* Larger buttons on mobile */
+        padding: 12px 15px;
+    }
+    
+    /* Image scaling on mobile */
+    .profile-photo, img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto; /* Center images */
     }
 }
 
-  
-  /* Flexbox Layout for About Section */
-  .about-container {
+/* Flexbox Layout for About Section */
+.about-container {
     display: flex;
     align-items: center;
-  }
-  
-  .about-container p {
-    flex: 1; /* Ensures the text takes up remaining space */
-  }
-  
-  /* Profile Photo Styling */
-  .logo {
+}
+
+.about-container p {
+    flex: 1;
+}
+
+/* Profile Photo Styling */
+.logo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -129,28 +134,27 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-  
-  #about {
+/* Section Background Gradients */
+#about {
     background: linear-gradient(to right, #ff9a9e, #fecfef);
-  }
-  
-  #education {
-    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-  }
-  
-  #expertise {
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
-  }
-  
-  #experience {
-    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-  }
-  
-  #projects {
-    background: linear-gradient(to right, #d4fc79, #96e6a1);
-  }
+}
 
-  
+#education {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+#expertise {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+#experience {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+#projects {
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
 /* Expertise Section Styling */
 #expertise {
     padding: 40px;
@@ -158,24 +162,22 @@
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  #expertise h2 {
+}
+
+#expertise h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
     font-size: 2em;
-  }
-  
-  /* Expertise Container */
-  .expertise-container {
+}
+
+.expertise-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  /* Expertise Item */
-  .expert-item {
+}
+
+.expert-item {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -186,31 +188,31 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border: 3px solid transparent;
     cursor: pointer;
-  }
-  
-  .expert-item:hover {
+}
+
+.expert-item:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border: 3px solid #ff5f6d;
-  }
-  
-  /* Icons */
-  .expert-item i {
+}
+
+.expert-item i {
     font-size: 2.5em;
     color: #ff5f6d;
     margin-bottom: 10px;
-  }
-  
-  .expert-item h3 {
+}
+
+.expert-item h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
     color: #333;
-  }
-  
-  .expert-item p {
+}
+
+.expert-item p {
     font-size: 0.9em;
     color: #555;
-  }
+}
+
 /* Experience Section Styling */
 #experience {
     padding: 40px;
@@ -218,24 +220,22 @@
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  #experience h2 {
+}
+
+#experience h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
     font-size: 2em;
-  }
-  
-  /* Experience Container */
-  .experience-container {
+}
+
+.experience-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  /* Experience Item */
-  .experience-item {
+}
+
+.experience-item {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -246,237 +246,182 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border: 3px solid transparent;
     cursor: pointer;
-  }
-  
-  .experience-item:hover {
+}
+
+.experience-item:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border: 3px solid #ffc371;
-  }
-  
-  /* Icons */
-  .experience-item i {
+}
+
+.experience-item i {
     font-size: 2.5em;
     color: #ff5f6d;
     margin-bottom: 10px;
-  }
-  
-  .experience-item h3 {
+}
+
+.experience-item h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
     color: #333;
-  }
-  
-  .experience-item p {
+}
+
+.experience-item p {
     font-size: 0.9em;
     color: #555;
-  }
+}
+
 /* Projects Section Styling */
 #projects {
     padding: 40px;
-    background: #f0f4f8; /* Soft light background */
+    background: #f0f4f8;
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  #projects h2 {
+}
+
+#projects h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
     font-size: 2em;
-  }
-  
-  /* Projects Container */
-  .projects-container {
+}
+
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between cards */
-  }
-  
-  /* Project Item */
-  .project-item {
-    background-color: #ffffff; /* Card background */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #6a5acd; /* Left border color */
-    position: relative; /* Position for pseudo-element */
-  }
-  
-  .project-item:hover {
-    transform: translateY(-5px); /* Lift effect */
+    border-left: 5px solid #6a5acd;
+    position: relative;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Project Item Title */
-  .project-item h3 {
+}
+
+.project-item h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
-  }
-  
-  /* Project Item Description */
-  .project-item p {
+}
+
+.project-item p {
     font-size: 0.9em;
     color: #555;
-  }
-  
-  /* Link Styling */
-  .project-item a {
+}
+
+.project-item a {
     text-decoration: none;
     color: #ffffff;
-    background-color: #6a5acd; /* Button color */
+    background-color: #6a5acd;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
     transition: background-color 0.3s ease;
-  }
-  
-  .project-item a:hover {
-    background-color: #5a4db1; /* Darker on hover */
-  }
-  
- /* Contact Section Styling */
+}
+
+.project-item a:hover {
+    background-color: #5a4db1;
+}
+
+/* Contact Section Styling */
 #contact {
     padding: 40px;
-    background-color: #f9f9f9; /* Light background */
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-  }
-  
-  #contact h2 {
+}
+
+#contact h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
     font-size: 2em;
-  }
-/* Contact Section Styling */
-#contact {
-    padding: 40px;
-    background-color: #f0f4f8; /* Soft background */
-    border-radius: 10px;
-    margin-bottom: 40px;
-  }
-  
-  #contact h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 2em;
-  }
-  
-  /* Contact Container */
-  .contact-container {
-    display: flex; /* Flexbox for side-by-side layout */
-    align-items: center; /* Center vertically */
-    justify-content: space-around; /* Space around items */
-    flex-wrap: wrap; /* Responsive wrapping */
-  }
-  
-  /* Contact Image */
-  .contact-image {
-    flex: 1; /* Flexible space */
-    max-width: 400px; /* Max width for image */
-    margin-right: 20px; /* Spacing */
-  }
-  
-  .contact-image img {
-    width: 100%; /* Responsive image */
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-/* Contact Section Styling */
-#contact {
-    padding: 40px;
-    background-color: #f0f4f8; /* Soft background */
-    border-radius: 10px;
-    margin-bottom: 40px;
-  }
-  
-  #contact h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 2em;
-  }
-  
-  /* Contact Container */
-  .contact-container {
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center the card */
-    flex-wrap: wrap; /* Responsive wrapping */
-  }
-  
-  /* Contact Card */
-  .contact-card {
-    flex: 1; /* Flexible space */
-    max-width: 500px; /* Maximum width for the card */
-    background-color: white; /* Card background */
-    padding: 30px; /* Increased padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s; /* Smooth hover effect */
-  }
-  
-  .contact-card:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
-  }
-  
-  /* Form Styling */
-  .contact-form {
+}
+
+.contact-container {
     display: flex;
-    flex-direction: column; /* Vertical alignment */
-  }
-  
-  .form-group {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Contact Card */
+.contact-card {
+    flex: 1;
+    max-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.contact-card:hover {
+    transform: scale(1.02);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
     margin-bottom: 15px;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Increased padding */
-    border: 2px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1em;
-    transition: border-color 0.3s ease; /* Transition for focus effect */
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #6a5acd; /* Border color on focus */
-    outline: none; /* Remove default outline */
-  }
-  
-  button {
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
     padding: 12px;
-    background-color: #6a5acd; /* Button color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #ddd;
+    border-radius: 5px;
     font-size: 1em;
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease, transform 0.2s; /* Transition for hover effect */
-  }
-  
-  button:hover {
-    background-color: #5a4db1; /* Darker button color on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-  }
-  
-  /* Footer Styling */
-  footer {
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6a5acd;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #5a4db1;
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
@@ -484,9 +429,8 @@
     border-top: 5px solid #ff5f6d;
     font-size: 0.9em;
     position: relative;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
-  }
-  
+}
